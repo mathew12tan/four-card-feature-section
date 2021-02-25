@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  /* ### Primary */
+
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  /* ### Neutral */
+
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  width: 83%;
+  margin: 90px auto 0;
+  background: var(--Very-Light-Gray);
+}
+
+/* intro */
+
+.intro {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.intro p {
+  color: var(--Grayish-Blue);
+}
+
+.heading {
+  margin-bottom: 20px;
+}
+
+.heading h1 {
+  font-size: 1.6em;
+  color: var(--Very-Dark-Blue);
+  line-height: 1.5em;
+}
+
+.heading h1:nth-child(1) {
+  font-weight: 200;
+}
+
+/* cards */
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  margin-bottom: 50px;
+}
+
+.cards-middle {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+}
+
+.card {
+  height: 224px;
+  position: relative;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  box-shadow: 5px 5px 15px var(--Grayish-Blue);
+}
+
+.card-top {
+  background-color: white;
+  height: 220px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  position: relative;
+  top: 4px;
+  padding: 25px;
+  font-size: 0.9em;
+}
+
+.card h2 {
+  color: var(--Very-Dark-Blue);
+  margin-bottom: 5px;
+}
+
+.card p {
+  color: var(--Grayish-Blue);
+  line-height: 2em;
+}
+
+.card img {
+  height: 55px;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+
+.card-1 {
+  background: var(--Cyan);
+}
+.card-2 {
+  background: var(--Red);
+}
+.card-3 {
+  background: var(--Orange);
+}
+.card-4 {
+  background: var(--Blue);
+}
+
+@media screen and (min-width: 375px) {
+  body {
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 1040px) {
+  body {
+    max-width: 80%;
+  }
+
+  .intro {
+    max-width: 500px;
+    margin: 0 auto 50px;
+  }
+
+  .cards {
+    flex-direction: row;
+    column-gap: 30px;
+  }
+
+  .card, .cards-middle {
+    flex: 1;
+  }
+
+  .card-1, .card-4 {
+    align-self: center;
+  }
+
+}
+
+/* attribution */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
